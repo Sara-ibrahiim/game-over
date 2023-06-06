@@ -1,0 +1,62 @@
+body{
+    background-color: #272b30;
+}
+.gray{
+    color: #AAAAAA !important;
+}
+.bg-blue{
+background-color: #32383E !important;
+}
+.bg-dark-in{
+    background-color: #1c1e22 !important;
+}
+button{
+    border-color: black  !important;
+}
+.register form input{
+    outline-offset: none !important;
+    border: none !important;
+}
+
+.btn-small{
+    background-color: #4799eb !important;
+    border-radius: 10px !important;
+    border-color: #4799eb !important;
+    color: white !important;
+    font-size: 14px !important;
+    margin: 3px !important;
+
+}
+.sky{
+    color: #4799eb !important;
+}
+
+.cursor-pointer
+{
+    cursor: pointer;
+}
+a{
+    text-decoration: none !important;
+}
+.bg-genre{
+    background-color: #AAAAAA;
+    border-radius: 5px;
+    padding: 0px 2px;
+    font-size: 13px;
+}
+.w-colm{
+width: 50% !important;
+
+}
+.text-end{
+    align-items: end !important;
+    width: 40%;
+}
+.prim{
+    border-color: #4799eb !important;
+}
+.col-md-4:hover,.col-md-3:hover{
+    transform: scale(1.1);
+    transition: 1s;
+    overflow: hidden;
+}

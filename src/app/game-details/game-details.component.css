@@ -1,0 +1,50 @@
+.btn-dark2 {
+    color: #aaa;
+    background-color: #32383e;
+    border-color: #32383e;
+  }
+  
+  .btn-ftg-blue {
+    background-image: linear-gradient(#4799eb, #4799eb 60%, #49acff);
+    background-repeat: no-repeat;
+    filter: none;
+    color: #fff;
+    background-color: #4799eb;
+    border-color: #4799eb;
+  }
+  .btn {
+    text-align: center;
+  }
+  
+  hr {
+    margin-top: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(94, 84, 84, 0.1);
+  }
+  
+  .cursor,
+  a {
+    cursor: pointer;
+  }
+  
+  section {
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    background-position: top;
+  }
+  
+  section .layer {
+    background: linear-gradient(rgba(39, 43, 48,.9) , rgba(39, 43, 48, 1) );
+    height: 100vh;
+  }
+  
+  .description {
+    line-height: 30px;
+    font-size: 20px;
+  }
+  
+  .game-thumbnail {
+    transition: all 0.5s;
+    left: 0;
+  }
+  

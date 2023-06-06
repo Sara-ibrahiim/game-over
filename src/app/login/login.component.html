@@ -1,0 +1,46 @@
+<section class="my-5">
+    <div class="container">
+        <div class="row mt-5 pt-5">
+            <div class="col-md-6 gx-0 mt-5 ">
+                <img src="../../assets/images/gaming.ebaf2ffc84f4451d.jpg" alt="gaming" class="w-100 h-100">
+
+            </div>
+            <div class="col-md-6 bg-blue text-center mt-5 ">
+                <div class="text-center mt-4 ">
+                   
+                    <img src="../../assets/images/logo.png" alt=" " class="w-25">
+                 
+                    
+                    <h4 class="text-center gray my-3">Log in to GameOver</h4>
+                </div>
+               <form action="" class="text-center" [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm)">
+          
+                <div class=" d-flex justify-content-center">
+                    <label for="email"class= "text-capitalize my-1"></label>
+                    <input  formControlName="email"  type="email" class="form-control w-75 " id="email" placeholder="email">
+
+
+                </div>
+          
+                <div class="d-flex justify-content-center mt-3 ">
+                    
+                    <label for="password"class= "text-capitalize my-1"> </label>
+                    <input formControlName="password"  type="text" class="form-control w-75" id="password" placeholder="password">
+
+                </div>
+                <button class="w-75 btn my-3 btn-primary bg-blue " type="submit"> Login</button>
+           
+             
+
+
+
+               </form>
+          
+               <hr>
+               <p class="gray text-center">Not a member yet? <a routerLink="/register">Create Account</a></p>
+                
+            </div>
+        </div>
+    </div>
+
+</section>

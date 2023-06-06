@@ -1,0 +1,72 @@
+<section class="bg-dark-blue">
+    <div class="bg position-relative">
+        <div class="layer position-absolute w-100">
+            <div class="container">
+                <div class=" d-flex justify-content-center mt-5 ">
+                    <div class="text-center mt-5 ">
+                        <h1 class="gray mt-5">Find & track the best <span class="sky">free-to-play</span> games!
+                        </h1>
+                       <h5 class="gray fw-light my-3">Track what you've played and search for what to play next! Plus get free premium loot!</h5>
+                       <button class="btn btn-dark" routerLink="/all">Browse Games</button>
+
+                    </div>
+                  
+                </div>
+                
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="my-5">
+
+    <div class="container">
+        <div class="row">
+            <h3 class="gray"> <i class="fa-solid fa-robot"></i>Personalized Recommendations</h3>
+            <div class="col-md-4 mt-5 cursor-pointer" *ngIf="gamesData">
+                <div class="bg-blue ">
+                <a [routerLink]="['/gameDetails',id]" >
+                    <img [src]="thumbnail1" alt="" class="w-100">
+                 <div class="d-md-flex justify-content-between p-3">
+                    <h3 class="gray">{{title1}}</h3>
+                    <button class="btn btn-small ">Free</button>
+                
+                 </div>
+                </a>
+                </div>
+
+            </div>
+            <div class="col-md-4 mt-5 cursor-pointer" *ngIf="gamesData2">
+                <div class="bg-blue">
+                    <a [routerLink]="['/gameDetails',id2]">
+                    <img [src]="thumbnail2" alt="" class="w-100">
+                 <div class="d-md-flex justify-content-between p-3">
+                    <h3 class="gray">{{title2}}</h3>
+                    <button class="btn btn-small ">Free</button>
+                 </div>
+                </a>
+                </div>
+
+            </div>
+            <div class="col-md-4 mt-5 cursor-pointer" *ngIf="gamesData3">
+                <div class="bg-blue">
+                    <a [routerLink]="['/gameDetails',id3]">
+                    <img [src]="thumbnail3" alt="" class="w-100">
+                 <div class="d-md-flex justify-content-between p-3">
+                    <h3 class="gray">{{title3}}</h3>
+                    <button class="btn btn-small ">Free</button>
+                 </div>
+                </a>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+</section>

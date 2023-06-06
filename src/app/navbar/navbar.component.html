@@ -1,0 +1,96 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+</style>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top ">
+    <div class="container">
+      <a class="navbar-brand w-25"> <img src="../../assets/images/logo.png" alt="" routerLink="/home" class="w-25 ">
+        <span class="game">Game Over</span></a>
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul *ngIf="isLogin" class="navbar-nav me-auto mt-2 mt-lg-0"> 
+        
+              <li class="nav-item">
+                  <a class="nav-link text-capitalize" routerLink="home" routerLinkActive="/home">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-capitalize" routerLink="all" routerLinkActive="/all" > all</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  platforms
+                </a>
+                <ul class="dropdown-menu">
+                  <li data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"><a class="dropdown-item" [routerLink]="['/games','Platforms','pc']">pc</a></li>
+                  <li data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"><a class="dropdown-item" [routerLink]="['/games','Platforms','browser']">browser</a></li>
+                </ul>
+                
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  sort-by
+                </a>
+                <ul class="dropdown-menu">
+                  <li data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"><a class="dropdown-item" [routerLink]="['/games','sort-by','release-date']">release-date</a></li>
+                  <li data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"><a class="dropdown-item" [routerLink]="['/games','sort-by','popularity']">popularity</a></li>
+                  <li data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"><a class="dropdown-item" [routerLink]="['/games','sort-by','alphabetical']">alphabetical</a></li>
+                  <li data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"><a class="dropdown-item" [routerLink]="['/games','sort-by','relevance']">relevance</a></li>
+                </ul>
+                
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categories
+                </a>
+                <ul class="dropdown-menu">
+                  <li data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"><a class="dropdown-item" [routerLink]="['/games','Categories','racing']">racing</a></li>
+                  <li data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"><a class="dropdown-item" [routerLink]="['/games','Categories','sports']">sports</a></li>
+                  <li data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"><a class="dropdown-item" [routerLink]="['/games','Categories','social']">social</a></li>
+                  <li data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"><a class="dropdown-item" [routerLink]="['/games','Categories','shooter']">shooter</a></li>
+                  <li data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"><a class="dropdown-item" [routerLink]="['/games','Categories','open-world']">open-world</a></li>
+                  <li data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"><a class="dropdown-item" [routerLink]="['/games','Categories','zombie']">zombie</a></li>
+                  <li data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"><a class="dropdown-item" [routerLink]="['/games','Categories','fantasy']">fantasy</a></li>
+                  <li data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"><a class="dropdown-item" [routerLink]="['/games','Categories','action-rpg']">action-rpg</a></li>
+                  <li data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"><a class="dropdown-item" [routerLink]="['/games','Categories','action']">action</a></li>
+                  <li data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"><a class="dropdown-item" [routerLink]="['/games','Categories','flight']">flight</a></li>
+                  <li data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"><a class="dropdown-item" [routerLink]="['/games','Categories','battle-royale']">battle-royale</a></li>
+                </ul>
+              </li>
+
+              
+
+              
+              
+              
+
+
+          </ul>
+          <ul  class="navbar-nav ms-auto mt-2 mt-lg-0">
+           
+                 
+              
+
+              <li *ngIf="!isLogin" class="nav-item btn btn-dark prim">
+                  <a class="nav-link text-capitalize " routerLink="login" routerLinkActive="/login" > login</a>
+              </li>
+              <li *ngIf="!isLogin" class="nav-item btn btn-dark prim ms-2">
+                  <a class="nav-link text-capitalize" routerLink="register" routerLinkActive="/register" >join Free</a>
+              </li>
+              <li *ngIf="isLogin" class="nav-item btn btn-dark prim">
+                  <a class=" cursor-pointer nav-link text-capitalize"  (click)="logout()" > Logout</a>
+              </li>
+             
+                     
+               
+              
+              
+
+
+          </ul>
+      </div>
+</div>
+</nav>
+

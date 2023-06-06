@@ -1,0 +1,84 @@
+<section class="my-5">
+    <div class="container  mt-5">
+        <div class="row mt-5 pt-2">
+            <div class="col-md-6 gx-0 mt-5">
+                <img src="../../assets/images/gaming.ebaf2ffc84f4451d.jpg" alt="gaming" class="w-100 h-100">
+
+            </div>
+            <div class="col-md-6 bg-blue mt-5  ">
+                <div class="">
+                    <h4 class="text-center gray mt-5 mb-3">Create My Account!</h4>
+                </div>
+               <form action="" class="register" [formGroup]="registerForm" (ngSubmit)="registerUser(registerForm)">
+                <div class="d-flex ">
+                    <div class="col-md-6  pe-2">
+                        <label for="name"class= "text-capitalize my-1"> </label>
+                        <input  formControlName="name" type="text" class="form-control bg-dark-in text-white " id="name" placeholder="FirstName">
+                        <div *ngIf="registerForm.get('name')?.errors && registerForm.get('name')?.touched"
+                        class="alert alert-danger">
+                           <p *ngIf="registerForm.get('name')?.getError('required')">Name is Required</p>
+                           <p *ngIf="registerForm.get('name')?.getError('minlength')">Name min 3</p>
+                           <p *ngIf="registerForm.get('name')?.getError('maxlength')">Name max 10</p>
+   
+                       </div>
+                    </div>
+                    <div class="col-md-6 ">
+                        <label for="email"class= "text-capitalize my-1"></label>
+                        <input  formControlName="email"  type="email" class="form-control bg-dark-in text-white" id="email" placeholder="email">
+                        <div *ngIf="registerForm.get('email')?.errors && registerForm.get('email')?.touched"
+                        class="alert alert-danger">
+                        <p *ngIf="registerForm.get('email')?.getError('required')">Email is Required</p>
+                        <p *ngIf="registerForm.get('email')?.getError('minlength')">Email not valid </p>
+                  
+                    </div>
+    
+                    </div>
+                
+                </div>
+     
+
+     
+                <div >
+                    
+                    <label for="password"class= "text-capitalize my-1"> </label>
+                    <input formControlName="password"  type="text" class="form-control bg-dark-in text-white" id="password" placeholder="password">
+                    <div *ngIf="registerForm.get('password')?.errors && registerForm.get('password')?.touched"
+                    class="alert alert-danger">
+                       <p *ngIf="registerForm.get('password')?.getError('required')">password is Required</p>
+                       <p *ngIf="registerForm.get('password')?.getError('pattern')">password must be containe upper case , lower case ,Number </p>
+                   
+
+                   </div>
+
+
+
+                </div>
+
+
+                <div>
+                    <label for="rePassword"class= "text-capitalize my-1"> </label>
+                    <input formControlName="rePassword" type="text" class="form-control bg-dark-in " id="rePassword"placeholder="Repassword" >
+                    <div *ngIf="registerForm.get('repassword')?.errors && registerForm.get('repassword')?.touched"
+                    class="alert alert-danger">
+                       <p *ngIf="registerForm.get('repassword')?.getError('required')">repassword is Required</p>
+                       <p *ngIf="registerForm.get('repassword')?.getError('pattern')">repassword must be containe upper case , lower case ,Number </p>
+                       <p *ngIf="registerForm.get('repassword')?.getError('match')">repassword & password not matched</p>
+
+                   </div>
+              
+                </div>
+             <button class="w-100 btn my-3 btn-primary bg-blue" type="submit"> Create Account</button>
+             
+
+
+
+               </form>
+               <p></p>
+               <hr>
+               <p class="gray text-center">Already a member? <a routerLink="/login">Log In</a></p>
+                
+            </div>
+        </div>
+    </div>
+
+</section>
